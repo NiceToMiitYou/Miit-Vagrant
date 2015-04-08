@@ -25,9 +25,6 @@ echo "Updating repository..."
 apt-get install python-software-properties build-essential -y 
 
 echo "Installing PHP..."
-apt-get install nodejs npm -y 
-
-echo "Installing PHP..."
 apt-get install php5-common php5-dev php5-cli php5-fpm -y 
 
 echo "Installing PHP extensions..."
@@ -37,7 +34,7 @@ echo "Configuring XDebug..."
 echo '
 
 # Time Zone
-date.timezone = "Europe/France"
+date.timezone = "Europe/Paris"
 
 # Added for xdebug
 zend_extension="/usr/lib/php5/20100525/xdebug.so"
