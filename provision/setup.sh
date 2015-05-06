@@ -41,6 +41,9 @@ zend_extension="/usr/lib/php5/20100525/xdebug.so"
 xdebug.remote_enable=1
 xdebug.remote_handler=dbgp xdebug.remote_mode=req
 xdebug.remote_host=0.0.0.0 xdebug.remote_port=2331
+xdebug.profiler_enable=1
+xdebug.profiler_enable_trigger=1
+xdebug.profiler_output_name="cachegrind.out.%t.%p"
 
 ' >> /etc/php5/fpm/php.ini 
 
