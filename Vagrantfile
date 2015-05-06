@@ -8,8 +8,10 @@ Vagrant.configure("2") do |config|
 	config.vm.network :forwarded_port, guest: 2331, host: 2331, auto_correct: true
 
     # Setup synced folder
-    config.vm.synced_folder "./", "/var/www", create: true, group: "www-data", owner: "www-data"
-    config.vm.synced_folder "./tmp-vagrant", "/tmp", create: true, group: "www-data", owner: "www-data"
+    config.vm.synced_folder "./", "/var/www",
+        create: true,
+        group: "www-data",
+        owner: "www-data"
 
     # VM specific configs
     config.vm.provider "virtualbox" do |v|
