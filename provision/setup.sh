@@ -28,7 +28,7 @@ echo "Installing PHP..."
 apt-get install php5-common php5-dev php5-cli php5-fpm -y 
 
 echo "Installing PHP extensions..."
-apt-get install curl php5-curl php5-gd php5-mcrypt php5-mysql php5-mongo php5-xdebug -y 
+apt-get install curl php5-curl php5-gd php5-mcrypt php5-mysql php5-mongo php5-xdebug php-apc -y 
 
 echo "Configuring XDebug..."
 echo '
