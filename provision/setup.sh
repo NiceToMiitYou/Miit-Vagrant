@@ -53,7 +53,7 @@ echo "Installing Composer..."
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-# MySQL 
+# MySQL
 echo "Preparing MySQL..."
 apt-get install debconf-utils -y 
 debconf-set-selections <<< "mysql-server mysql-server/root_password password root"
@@ -61,6 +61,13 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 
 echo "Installing MySQL..."
 apt-get install mysql-server -y 
+
+# MongoDB 
+echo "Installing MongoDB..."
+apt-get install mongodb-server -y
+
+echo "Configuring MongoDB..."
+sed -i 's/bind_ip = 127.0.0.1/bind_ip = 0.0.0.0/g' /etc/mongodb.conf
 
 # Nginx Configuration
 echo "Configuring Nginx..."
